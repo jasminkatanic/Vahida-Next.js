@@ -1,0 +1,237 @@
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,900&display=swap');
+
+.usluge{
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  flex-direction: column;  
+
+  &-head{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 85vh;
+    background-image: url('/img/usluge.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+    @include respond(maxNavBar){                                   
+      min-height: 250px;  
+      background-size: contain; 
+      background-repeat: no-repeat;          
+    }
+  }
+
+  &-section{
+    display: flex;
+    width: 100%;
+    height: auto; 
+    flex-direction: column;  
+    
+
+    &-first{
+      display: flex;
+      width: 100%;
+      height: auto;
+      flex-direction: column;     
+
+      &-head{
+        display: flex;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+
+        &-main{
+          display: block;
+          width: 100%;
+          font-size: 3rem;
+          margin: 5% auto 0% auto;
+          font-family: 'Lato';
+          font-weight: 300;          
+        }
+        
+
+        &-sub{
+          display: block;
+          margin: 2% auto;
+          padding: 0% 10% 0% 10%;
+          font-size: 1.5rem;
+          font-family: 'Lato';
+          
+          @include respond(maxNavBar){                                   
+            padding: 0%;                   
+          }
+        }
+
+      }
+      
+
+      &-content{
+        display: flex;
+        margin: 2% auto 2% auto;
+        width: 85%;
+        height: auto;            
+        flex-direction: column;        
+
+        &-top{
+          display: flex;
+          width: 100%;
+          height: auto;
+          justify-content: center;
+          background-color: $dark-gray-color;
+
+          &-text{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            h3{
+              font-size: 1.7rem;
+              align-self: center;
+              text-transform: capitalize;
+              font-weight: 600;
+              font-family: 'Lato';
+
+              @include respond(maxNavBar){                                   
+                font-size: 1.2rem;      
+              }
+            }
+          }
+        }
+
+        &-bottom{
+          display: flex;
+          width: 100%;
+          height: 100%;          
+
+          &-content{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            padding: 1%;
+            font-size: 1.3rem;
+            flex-direction: column;            
+            background-color: $ligth-gray-color;
+            white-space: pre-line;               
+
+            p{
+              text-align: justify;
+
+              @include respond(maxNavBar){                                   
+                text-align: center;        
+              }
+            }
+
+            
+            li{
+              text-align: justify;
+              margin-top: 1%;
+              padding: 0% 1%;
+
+              &:first-child{
+                margin-top: 0%;
+              }
+
+              @include respond(maxNavBar){ 
+                text-align: left;                                  
+                margin-top: 5%;        
+              }
+            }
+
+            &-button{
+              display: flex;
+              width: 100%;
+              height: 10vh;
+              justify-content: center;
+              cursor: pointer;           
+
+              &-content{
+                display: flex;
+                width: auto;
+                align-self: center;                
+                padding: 1%;
+                justify-content: center;
+                background-color: $dark-blue-color;
+                width: 25%;
+                text-decoration: none;
+                box-shadow: 5px 5px 15px $black-color;
+                transition: all .6s;
+
+                &:hover{
+                  box-shadow: 5px 10px 15px $black-color;
+                }
+
+                &-text{
+                  text-decoration: none;
+                  font-size: 1.6rem;
+                  font-family: 'Merriweather', serif;
+                  color: $white-color;
+                  
+                }
+
+                @include respond(maxNavBar){ 
+                  width: 80%;      
+                }
+              }
+            }
+
+
+            &-more{
+              display: flex;
+              width: 100%;
+              height: 10vh;
+              justify-content: flex-start;              
+
+              &-content{
+                display: flex;
+                width: auto;
+                align-self: center;                
+                padding: 1%;
+                justify-content: center;
+                background: linear-gradient(125deg, #ff598d, #7de0ff);
+                width: 25%;
+                text-decoration: none;
+                box-shadow: 5px 5px 15px $black-color;
+                transition: all .6s;
+                
+
+
+                &:hover{
+                  box-shadow: 5px 10px 15px $black-color;
+                }
+
+                &-text{
+                  text-decoration: none;
+                  font-size: 1.6rem;
+                  font-family: 'Merriweather', serif;
+                  color: $white-color;
+                  
+                }
+
+                @include respond(maxNavBar){ 
+                  width: 80%;      
+                }
+              }
+
+              @include respond(maxNavBar){ 
+                justify-content: center;    
+              }
+            }
+            
+          }
+        }
+
+        @include respond(maxNavBar){                                   
+          width: 100%;          
+        }
+      }
+    }
+  }
+
+  
+  @include respond(maxNavBar){                                   
+    height: 100vh;  
+  }
+}
